@@ -46,7 +46,10 @@
     <!-- Header / Navigation -->
     <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
         <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-            <div class="font-bold text-xl tracking-wider text-main-green">HOUSE BRIDGE</div>
+            <a href="/" class="flex items-center hover:opacity-80 transition-all">
+                <img src="images/hb_logo.svg" alt="HOUSE BRIDGE" class="h-8 md:h-10 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="font-bold text-xl tracking-wider text-main-green hidden" style="display:none;">HOUSE BRIDGE</span>
+            </a>
             <a href="#contact" class="hidden md:block bg-main-green text-white px-6 py-2 rounded-full text-sm font-bold btn-hover transition-all">
                 無料相談はこちら
             </a>
@@ -109,7 +112,7 @@
                 <!-- Card 2 -->
                 <div class="bg-[#F9F7F5] p-8 rounded-xl border border-gray-100 shadow-sm flex flex-col items-center text-center">
                     <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-inner">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-main-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-main-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                         </svg>
                     </div>
@@ -350,7 +353,15 @@
 
             // Simulate API Call
             setTimeout(() => {
-                alert('ありがとうございます。内容を確認し、2営業日以内にご連絡いたします。');
+                const message = document.createElement('div');
+                message.className = 'fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-8 rounded-2xl shadow-2xl z-[100] text-center border border-gray-100';
+                message.innerHTML = `
+                    <h3 class="text-xl font-bold mb-4">送信完了</h3>
+                    <p class="mb-6">ありがとうございます。内容を確認し、2営業日以内にご連絡いたします。</p>
+                    <button onclick="this.parentElement.remove()" class="bg-main-green text-white px-8 py-2 rounded-full">閉じる</button>
+                `;
+                document.body.appendChild(message);
+                
                 btn.innerText = originalText;
                 btn.disabled = false;
                 e.target.reset();
