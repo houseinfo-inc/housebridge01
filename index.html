@@ -39,6 +39,16 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Accordion Style */
+        .message-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+        .message-content.open {
+            max-height: 1000px; /* 十分な高さ */
+        }
     </style>
 </head>
 <body class="overflow-x-hidden">
@@ -50,7 +60,7 @@
                 <img src="images/hb_logo.svg" alt="HOUSE BRIDGE ハウス・ブリッジ公式サイト" class="h-8 md:h-10 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                 <span class="font-bold text-xl tracking-wider text-main-green hidden" style="display:none;">HOUSE BRIDGE</span>
             </a>
-            <a href="#contact" class="hidden md:block bg-main-green text-white px-6 py-2 rounded-full text-sm font-bold btn-hover transition-all">
+            <a href="https://house-bridge.jp/contact1" class="hidden md:block bg-main-green text-white px-6 py-2 rounded-full text-sm font-bold btn-hover transition-all">
                 無料相談はこちら
             </a>
         </div>
@@ -78,12 +88,12 @@
                     家づくり迷子を卒業して、<br>
                     <span class="text-accent-orange">「最高の味方」</span>と理想の家を建てよう。
                 </h1>
-                <p class="text-lg md:text-xl mb-8 text-gray-600">
+                <h2 class="text-lg md:text-xl mb-8 text-gray-600">
                     探すのは工務店じゃない。<br class="hidden md:block">
                     自分に合う予算を出し、計画を立てる事が最も大切です。
-                </p>
+                </h2>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="#contact" class="bg-accent-orange text-white text-lg font-bold px-10 py-4 rounded-full shadow-lg btn-hover transition-all">
+                    <a href="https://house-bridge.jp/contact1" class="bg-accent-orange text-white text-lg font-bold px-10 py-4 rounded-full shadow-lg btn-hover transition-all">
                         まずは無料相談を予約する
                     </a>
                 </div>
@@ -117,7 +127,7 @@
                         </svg>
                     </div>
                     <h3 class="font-bold text-xl mb-3">理想と金額</h3>
-                    <p class="text-gray-600 text-base">やりたいことはあるが、それが一体いくらかかるのか不明瞭で計画が進まない。</p>
+                    <p class="text-gray-600 text-base">やりたいことはあるが、それが一体いくらかかかるのか不明瞭で計画が進まない。</p>
                 </div>
                 <!-- Card 3 -->
                 <div class="bg-[#F9F7F5] p-8 rounded-xl border border-gray-100 shadow-sm flex flex-col items-center text-center">
@@ -215,9 +225,25 @@
                 <div class="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 border-4 border-white shadow-md">
                     <img src="https://via.placeholder.com/200?text=Guide" alt="谷様" class="w-full h-full object-cover">
                 </div>
-                <div>
-                    <p class="text-main-green font-bold mb-2">ガイド：谷より</p>
-                    <p class="text-sm md:text-base italic">「私は特定の建築会社を勧めることはありません。あなたの家族にとって、何が最善かを一緒に考え抜くこと。それが私の仕事です。」</p>
+                <div class="flex-grow">
+                    <p class="text-main-green font-bold mb-2">ハウス・ブリッジ 谷より</p>
+                    <p class="text-sm md:text-base italic mb-4">「私は特定の建築会社を勧めることはありません。あなたの家族にとって、何が最善かを一緒に考え抜くこと。それが私の仕事です。」</p>
+                    
+                    <!-- Accordion Trigger -->
+                    <button onclick="toggleGuideMessage()" id="toggleBtn" class="flex items-center text-sm font-bold text-main-green border-b border-main-green pb-1 hover:opacity-70 transition-all">
+                        想いを詳しく読む
+                        <svg id="chevronIcon" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <!-- Detailed Content (Accordion) -->
+                    <div id="guideMessage" class="message-content">
+                        <div class="pt-6 text-sm md:text-base text-gray-600 leading-relaxed border-t border-main-green/10 mt-4">
+                            家づくりは人生で一番大きな買い物と言われますが、実はその「買い方」を教えてくれる場所は驚くほど少ないのが現状です。私は、特定の建築会社やハウスメーカーの営業マンではありません。そのため、お客様に対して特定の会社を強引に勧める必要も、不都合な真実を隠す必要もありません。<br><br>
+                            私の役割は、住宅業界の「プロ側の理論」ではなく、お客様の「暮らしの幸福」を最優先に考え、中立な立場からアドバイスをすることです。予算の立て方から、自分たちに本当に合う建築先の見極め方まで。あなたの家族にとって何が最善かを一緒に考え抜き、理想の家づくりというゴールまで二人三脚で伴走すること。それが、ハウス・ブリッジとしての私の仕事です。
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -277,44 +303,18 @@
     </section>
 
     <!-- Contact CTA Section -->
-    <section id="contact" class="py-20 px-4 mb-20">
+    <section id="contact" class="py-20 px-4 mb-20 text-center">
         <div class="max-w-3xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
-            <div class="bg-main-green text-white p-8 text-center">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4">まずはあなたの現在地を整理しませんか？</h2>
-                <p>初回無料相談（60分）を受け付けています。無理な営業はありません。</p>
-            </div>
-            <div class="p-8 md:p-12">
-                <form class="space-y-6">
-                    <div>
-                        <label class="block text-sm font-bold mb-2">お名前 <span class="text-red-500">*</span></label>
-                        <input type="text" placeholder="山田 太郎" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-main-green transition-all" required>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-bold mb-2">メールアドレス <span class="text-red-500">*</span></label>
-                        <input type="email" placeholder="example@mail.com" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-main-green transition-all" required>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-bold mb-2">希望相談形式 <span class="text-red-500">*</span></label>
-                        <div class="flex gap-6">
-                            <label class="flex items-center cursor-pointer">
-                                <input type="radio" name="type" class="w-4 h-4 text-main-green" checked>
-                                <span class="ml-2">対面形式</span>
-                            </label>
-                            <label class="flex items-center cursor-pointer">
-                                <input type="radio" name="type" class="w-4 h-4 text-main-green">
-                                <span class="ml-2">Zoom（オンライン）</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-bold mb-2">ご相談内容（任意）</label>
-                        <textarea rows="3" placeholder="予算について、土地探しについてなど" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-main-green transition-all"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-accent-orange text-white text-xl font-bold py-5 rounded-xl shadow-lg btn-hover transition-all">
-                        無料で相談を予約する
-                    </button>
-                    <p class="text-center text-xs text-gray-400 mt-4">送信いただく情報は、本相談の連絡以外には使用いたしません。</p>
-                </form>
+            <div class="bg-main-green text-white p-10 md:p-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6">まずはあなたの現在地を整理しませんか？</h2>
+                <p class="mb-10 text-lg opacity-90 leading-relaxed text-white/90">
+                    初回無料相談（60分）を受け付けています。<br>
+                    無理な勧誘はありませんので、お気軽にご予約ください。
+                </p>
+                <a href="https://house-bridge.jp/contact1" class="inline-block bg-accent-orange text-white text-xl md:text-2xl font-bold py-5 px-12 rounded-xl shadow-lg btn-hover transition-all">
+                    無料で相談を予約する
+                </a>
+                <p class="mt-8 text-sm opacity-60 text-white/70 italic">※外部の公式サイト予約ページへ移動します</p>
             </div>
         </div>
     </section>
@@ -322,11 +322,13 @@
     <!-- Footer -->
     <footer class="bg-main-green text-white/60 py-12 text-center px-4">
         <div class="max-w-7xl mx-auto">
-            <div class="text-white font-bold text-2xl tracking-widest mb-4">HOUSE BRIDGE</div>
-            <p class="text-sm mb-8">「情報の波に疲れた人を救う、温かな港」</p>
-            <div class="flex justify-center gap-6 text-sm mb-8">
-                <a href="#" class="hover:text-white transition-colors">運営会社</a>
-                <a href="#" class="hover:text-white transition-colors">プライバシーポリシー</a>
+            <p class="text-white/80 text-sm mb-4">建築家ネットワーク・ナビ 大阪ナビ</p>
+            <a href="https://house-bridge.jp/" class="inline-block hover:opacity-80 transition-all mb-4" title="ハウス・ブリッジ公式サイトへ">
+                <img src="images/hb_logo.svg" alt="HOUSE BRIDGE" class="h-8 md:h-10 w-auto brightness-0 invert mx-auto">
+            </a>
+            <p class="text-sm mb-8 italic">「情報の波に疲れた人を救う、温かな港」</p>
+            <div class="flex justify-center text-sm mb-8 text-white/80">
+                <span>株式会社ハウス・ブリッジ</span>
             </div>
             <p class="text-xs">&copy; 2024 House Bridge. All Rights Reserved.</p>
         </div>
@@ -334,7 +336,7 @@
 
     <!-- Floating CTA (Mobile Only) -->
     <div class="fixed bottom-0 left-0 w-full p-4 z-50 md:hidden bg-gradient-to-t from-white/90 to-transparent">
-        <a href="#contact" class="flex items-center justify-center w-full bg-accent-orange text-white font-bold py-4 rounded-full shadow-2xl text-lg btn-hover transition-all">
+        <a href="https://house-bridge.jp/contact1" class="flex items-center justify-center w-full bg-accent-orange text-white font-bold py-4 rounded-full shadow-2xl text-lg btn-hover transition-all">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
             </svg>
@@ -343,30 +345,21 @@
     </div>
 
     <script>
-        // Simple Form Submission Logic
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const btn = e.target.querySelector('button');
-            const originalText = btn.innerText;
-            btn.innerText = '送信中...';
-            btn.disabled = true;
-
-            // Simulate API Call
-            setTimeout(() => {
-                const message = document.createElement('div');
-                message.className = 'fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-8 rounded-2xl shadow-2xl z-[100] text-center border border-gray-100';
-                message.innerHTML = `
-                    <h3 class="text-xl font-bold mb-4">送信完了</h3>
-                    <p class="mb-6">ありがとうございます。内容を確認し、2営業日以内にご連絡いたします。</p>
-                    <button onclick="this.parentElement.remove()" class="bg-main-green text-white px-8 py-2 rounded-full">閉じる</button>
-                `;
-                document.body.appendChild(message);
-                
-                btn.innerText = originalText;
-                btn.disabled = false;
-                e.target.reset();
-            }, 1500);
-        });
+        // Guide Message Toggle Logic
+        function toggleGuideMessage() {
+            const content = document.getElementById('guideMessage');
+            const icon = document.getElementById('chevronIcon');
+            const btn = document.getElementById('toggleBtn');
+            
+            content.classList.toggle('open');
+            icon.classList.toggle('rotate-180');
+            
+            if (content.classList.contains('open')) {
+                btn.firstChild.textContent = '閉じる';
+            } else {
+                btn.firstChild.textContent = '想いを詳しく読む';
+            }
+        }
     </script>
 </body>
 </html>
