@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ハウス・ブリッジ | 注文住宅の中立ガイド</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@600;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --base-color: #F9F8F1;
+            --main-color: #D2B48C;
+            --accent-color: #4A5D4E;
+            --text-color: #333333;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--base-color);
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+        h1, h2, h3 {
+            font-family: 'Noto Serif JP', serif;
+        }
+        .bg-main { background-color: var(--main-color); }
+        .bg-accent { background-color: var(--accent-color); }
+        .text-accent { color: var(--accent-color); }
+        .border-accent { border-color: var(--accent-color); }
+        
+        .hand-drawn {
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            border: 2px solid var(--main-color);
+        }
+        .cta-button {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center">
+                <!-- ロゴ画像：images/image1 -->
+                <img src="images/image1" alt="ハウス・ブリッジ" class="h-8 md:h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="font-bold text-lg tracking-wider hidden" style="display:none;">ハウス・ブリッジ</span>
+            </div>
+            <a href="#contact" class="bg-accent text-white px-4 py-2 rounded-full text-sm font-bold hover:opacity-90 transition">
+                無料相談
+            </a>
+        </div>
+    </header>
+
+    <!-- ① ファーストビュー (MV) -->
+    <section class="relative pt-32 pb-20 overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <p class="text-accent font-bold mb-4 tracking-widest text-sm md:text-base">一般社団法人建築家ネットワーク・ナビ 大阪ナビ</p>
+                <h1 class="text-3xl md:text-5xl leading-tight mb-6">
+                    <span class="inline-block">「年収別の正解」を探すのは、</span><br class="md:hidden">
+                    <span class="text-accent inline-block">今日で終わりにしませんか？</span>
+                </h1>
+                <p class="text-gray-600 mb-8 max-w-lg">
+                    ハウス・ブリッジが、あなたの利益だけを考える「中立な味方」として、家づくりの現在地整理から完成まで伴走します。
+                </p>
+                <a href="#contact" class="cta-button inline-block bg-main text-white px-8 py-4 rounded-xl text-lg font-bold shadow-lg">
+                    【無料】中立なプロに現在地を相談する
+                </a>
+            </div>
+            <div class="md:w-1/2 relative">
+                <div class="hand-drawn overflow-hidden bg-white shadow-xl">
+                    <!-- ヒーロー画像：images/image2 -->
+                    <img src="images/image2" alt="対話風景" class="w-full h-auto min-h-[300px] object-cover opacity-90" onerror="this.src='https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=800&q=80';">
+                </div>
+                <!-- イラスト風装飾 -->
+                <div class="absolute -bottom-6 -right-6 bg-white p-4 shadow-lg rounded-lg border-2 border-main hidden md:block">
+                    <p class="text-xs font-bold text-accent">住宅会社ではない<br>中立な第三者の立場</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ② 共感・問題提起 (Problem / Agitation) -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-2xl md:text-4xl mb-12">理想はあるのに、<br class="md:hidden">正解がわからないあなたへ。</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <div class="p-6 bg-gray-50 rounded-2xl border-l-4 border-main">
+                    <p class="font-bold mb-2 text-accent italic">01. 情報の迷子</p>
+                    <p class="text-sm">SNSやネットに情報は多いけれど、結局「自分の場合」はどうなのかが分からない。</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-2xl border-l-4 border-main">
+                    <p class="font-bold mb-2 text-accent italic">02. 予算の不安</p>
+                    <p class="text-sm">「今の家賃と同じなら大丈夫」と言われたが、将来の教育費や老後の負担が考慮されていない。</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-2xl border-l-4 border-main">
+                    <p class="font-bold mb-2 text-accent italic">03. 土地・ローンの壁</p>
+                    <p class="text-sm">土地探しやローンの手続き。個人で進めるにはリスクが高く、誰を信じていいか不安。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ③ 解決策・サービス詳細 (Solution / Offer) -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl md:text-4xl mb-4 italic text-accent italic">Solution</h2>
+                <h3 class="text-3xl md:text-4xl">住宅会社へ行く前に、<br>"中立なプロ"を隣に。</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div class="flex items-start space-x-6">
+                    <div class="text-4xl text-main font-serif">1</div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2">資金計画（ライフプラン）</h4>
+                        <p class="text-sm text-gray-600">「借りられる額」ではなく、あなたの人生設計から導き出した「無理なく返せる予算」を確定させます。</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-6">
+                    <div class="text-4xl text-main font-serif">2</div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2">土地探しと交渉</h4>
+                        <p class="text-sm text-gray-600">不動産業界の力学を熟知したプロが、予算上限を設定し、有利な条件での土地交渉をサポートします。</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-6">
+                    <div class="text-4xl text-main font-serif">3</div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2">住宅ローン・手続き</h4>
+                        <p class="text-sm text-gray-600">個人ではハードルが高い土地先行融資など、複雑な手続きを施主サイドに立って代行・助言します。</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-6">
+                    <div class="text-4xl text-main font-serif">4</div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2">全行程のスケジュール管理</h4>
+                        <p class="text-sm text-gray-600">完成まで「いつ・いくら・誰に」支払うのかを一括管理。建築知識がなくても迷うことはありません。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ④ 信頼・安心の提示 (Narrow down) -->
+    <section class="py-20 bg-accent text-white">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl mb-8">「建てない」という判断も、<br>ここでは正解です。</h2>
+            <p class="mb-12 text-gray-200">
+                私たちは住宅会社ではありません。無理な営業は一切行いません。<br>
+                時には「今は建てるべきではない」とアドバイスすることもあります。
+            </p>
+            <div class="grid md:grid-cols-2 gap-6 text-left">
+                <div class="bg-white/10 p-6 rounded-xl border border-white/20">
+                    <h4 class="font-bold mb-2 flex items-center">
+                        <span class="mr-2">✓</span> 強引な勧誘なし
+                    </h4>
+                    <p class="text-sm text-gray-300">中立な組織だからこそ、しつこい電話や訪問営業は一切ありません。安心してご相談ください。</p>
+                </div>
+                <div class="bg-white/10 p-6 rounded-xl border border-white/20">
+                    <h4 class="font-bold mb-2 flex items-center">
+                        <span class="mr-2">✓</span> 断り代行
+                    </h4>
+                    <p class="text-sm text-gray-300">断りづらい住宅会社への辞退連絡も、私たちが角を立てずに代行いたします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ⑤ 最終行動 (Action) -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <div class="bg-white p-8 md:p-16 rounded-3xl shadow-2xl border-2 border-main relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-main/10 -mr-16 -mt-16 rounded-full"></div>
+                
+                <h2 class="text-2xl md:text-3xl mb-4 font-bold">もう一人で迷わない。<br>あなたの「現在地」を整理する60分。</h2>
+                <p class="text-gray-600 mb-10">
+                    無料の個別コンサルティングを実施中（対面 or オンライン）。<br>
+                    家づくりのプロが、あなたのモヤモヤを可視化します。
+                </p>
+
+                <form class="text-left space-y-6">
+                    <div>
+                        <label class="block text-sm font-bold mb-2">お名前</label>
+                        <input type="text" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-main outline-none transition" placeholder="山田 太郎">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-2">メールアドレス</label>
+                        <input type="email" class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-main outline-none transition" placeholder="example@mail.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-2">相談形式</label>
+                        <select class="w-full border-2 border-gray-100 p-3 rounded-lg focus:border-main outline-none transition">
+                            <option>対面での相談を希望</option>
+                            <option>オンライン（Zoom等）を希望</option>
+                        </select>
+                    </div>
+                    <button type="button" class="w-full bg-accent text-white py-5 rounded-xl text-xl font-bold cta-button shadow-xl">
+                        【無料】中立なプロに家づくりの現在地を相談する
+                    </button>
+                </form>
+                
+                <p class="mt-6 text-xs text-gray-400">
+                    ※サポート費用の懸念について：土地交渉や金利選択による削減効果により、多くの場合サポート費用以上のメリットを享受いただけます。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-2xl text-center mb-12">よくある質問</h2>
+            <div class="space-y-4">
+                <details class="group bg-white rounded-lg p-6 shadow-sm cursor-pointer">
+                    <summary class="list-none flex justify-between items-center font-bold">
+                        <span>相談したら必ず契約しなければいけませんか？</span>
+                        <span class="text-main">+</span>
+                    </summary>
+                    <p class="mt-4 text-sm text-gray-600">いいえ、そんなことはありません。現状の課題を整理するだけでも歓迎です。私たちの価値を感じていただいた場合のみ、次のステップへ進んでいただけます。</p>
+                </details>
+                <details class="group bg-white rounded-lg p-6 shadow-sm cursor-pointer">
+                    <summary class="list-none flex justify-between items-center font-bold">
+                        <span>どのような方が相談に来ますか？</span>
+                        <span class="text-main">+</span>
+                    </summary>
+                    <p class="mt-4 text-sm text-gray-600">「ハウスメーカーを回りすぎて疲れてしまった方」「予算に不安がある方」「土地が見つからず困っている方」など、多岐にわたります。建築知識がない方こそ、ぜひお越しください。</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-bold text-lg mb-4">ハウス・ブリッジ</p>
+            <p class="text-sm text-gray-400 mb-8">
+                一般社団法人建築家ネットワーク・ナビ 大阪ナビ<br>
+                株式会社ハウス・ブリッジ
+            </p>
+            <p class="text-xs text-gray-500">© House Bridge All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
