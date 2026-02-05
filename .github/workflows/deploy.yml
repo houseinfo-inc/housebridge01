@@ -1,27 +1,24 @@
-name: Deploy LP to Sakura Internet
+name: Deploy to Sakura LP-2
 
 on:
   push:
     branches:
-      - main  # mainブランチに更新があったら実行
+      - main
 
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: 🚚 Get latest code
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: 🚀 Upload files via FTP
+      - name: Upload files via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # サーバー上の公開フォルダを指定（例：lpというフォルダに公開する場合）
-          server-dir: /www/lp/
-          # 転送から除外するファイル（指示書自体などは送らなくてOK）
-          exclude: |
-            **/.git*
-            **/.github*
+          # ここを www/lp/2/ に指定
+          server-dir: www/lp/2/
+          # 転送管理用（550エラー対策）
+          state-name: .git-ftp-state-lp-2
