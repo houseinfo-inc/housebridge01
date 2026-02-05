@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta property="og:title" content="ハウス・ブリッジ | 家づくり迷子をサポートします">
+    <meta property="og:description" content="中立な第三者として、あなたの理想の家づくりに伴走します。まずは無料相談から。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://house-bridge.jp/">
+    <meta property="og:image" content="images/DSC1062.jpg">
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CL8GY4PQ7M"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -77,7 +83,9 @@
                 <img src="images/hb_logo.svg" alt="HOUSE BRIDGE ハウス・ブリッジ公式サイト" class="h-8 md:h-10 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                 <span class="font-bold text-xl tracking-wider text-main-green hidden" style="display:none;">HOUSE BRIDGE</span>
             </a>
-            <a href="https://house-bridge.jp/contact1" class="hidden md:block bg-main-green text-white px-6 py-2 rounded-full text-sm font-bold btn-hover transition-all">
+            <a href="https://house-bridge.jp/contact1" 
+               onclick="gtag('event', 'generate_lead', {'event_category': 'button', 'event_label': 'header_contact'});"
+               class="hidden md:block bg-main-green text-white px-6 py-2 rounded-full text-sm font-bold btn-hover transition-all">
                 無料相談はこちら
             </a>
         </div>
@@ -106,208 +114,11 @@
                     自分に合う予算を出し、計画を立てる事が最も大切です。
                 </h2>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="https://house-bridge.jp/contact1" class="bg-accent-orange text-white text-lg font-bold px-10 py-4 rounded-full shadow-lg btn-hover transition-all">
+                    <a href="https://house-bridge.jp/contact1" 
+                       onclick="gtag('event', 'generate_lead', {'event_category': 'button', 'event_label': 'fv_contact'});"
+                       class="bg-accent-orange text-white text-lg font-bold px-10 py-4 rounded-full shadow-lg btn-hover transition-all">
                         まずは無料相談を予約する
                     </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-2xl md:text-3xl font-bold mb-4">あなたは今、どこで止まっていますか？</h2>
-            <div class="w-20 h-1 bg-accent-orange mx-auto mb-12"></div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left md:text-center">
-                <div class="bg-[#F9F7F5] p-8 rounded-xl border border-gray-100 shadow-sm flex flex-col items-center">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-inner">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-main-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="font-bold text-xl mb-3">予算の不安</h3>
-                    <p class="text-gray-600 text-sm md:text-base">住宅ローンを最後まで無理なく返していけるか不安で、一歩が踏み出せない。</p>
-                </div>
-                <div class="bg-[#F9F7F5] p-8 rounded-xl border border-gray-100 shadow-sm flex flex-col items-center">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-inner">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-main-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                        </svg>
-                    </div>
-                    <h3 class="font-bold text-xl mb-3">理想と金額</h3>
-                    <p class="text-gray-600 text-sm md:text-base">やりたいことはあるが、それが一体いくらかかかるのか不明瞭で計画が進まない。</p>
-                </div>
-                <div class="bg-[#F9F7F5] p-8 rounded-xl border border-gray-100 shadow-sm flex flex-col items-center">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-inner">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-main-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="font-bold text-xl mb-3">依頼先の迷い</h3>
-                    <p class="text-gray-600 text-sm md:text-base">ハウスメーカー、工務店、建築家。自分たちに本当に合うのは誰か分からない。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 px-4">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4">なぜ、迷ってしまうのか？</h2>
-                <p class="text-gray-600">それは、住宅業界に「売る側のプロ」しかいないからです。</p>
-            </div>
-            
-            <div class="bg-main-green text-white p-8 md:p-12 rounded-3xl shadow-xl overflow-hidden relative">
-                <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h3 class="text-xl font-bold mb-6 border-l-4 border-accent-orange pl-4">「借りられる額」の罠</h3>
-                        <p class="mb-6 leading-relaxed text-white">
-                            銀行やメーカーが提示するのは、あくまで「借りられる額」です。<br>
-                            しかし、本当に大切なのはあなたの人生設計に基づいた<span class="text-accent-orange font-bold">「無理なく返せる額」</span>です。
-                        </p>
-                        <p class="text-white/90">ハウス・ブリッジは、特定の会社を売る営業ではありません。あなたの隣に座り、中立な立場から全体を俯瞰するガイドです。</p>
-                    </div>
-                    <div class="bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/20">
-                        <h4 class="text-center font-bold mb-4 text-white">業界の構造比較</h4>
-                        <div class="space-y-4 text-sm">
-                            <div class="flex justify-between items-center bg-red-400/20 p-3 rounded text-white">
-                                <span>一般的な相談先</span>
-                                <span class="font-bold">売ることが目的</span>
-                            </div>
-                            <div class="flex justify-center text-white/50">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-7 7-7-7m14-8l-7 7-7-7" />
-                                </svg>
-                            </div>
-                            <div class="flex justify-between items-center bg-accent-orange p-3 rounded shadow-md text-white">
-                                <span>ハウス・ブリッジ</span>
-                                <span class="font-bold">「納得」が目的</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white px-4 overflow-hidden">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-main-green">ハウス・ブリッジの伴走サポート</h2>
-                <p class="text-gray-600 font-medium">資金計画から家が完成するまで、私たちがずっと同行します。</p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-0 mb-20 items-stretch border border-gray-100 rounded-xl overflow-hidden shadow-sm">
-                <div class="text-center p-8 border-gray-100 border-b md:border-b-0 md:border-r bg-white flex flex-col items-center">
-                    <div class="w-20 h-20 flex items-center justify-center mb-6">
-                        <span class="text-5xl" role="img" aria-label="Money Bag">💰</span>
-                    </div>
-                    <h4 class="font-bold text-lg mb-2 text-main-green">資金計画</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">ライフプランに合わせた予算算出</p>
-                </div>
-                <div class="text-center p-8 border-gray-100 border-b md:border-b-0 md:border-r bg-white flex flex-col items-center">
-                    <div class="w-20 h-20 flex items-center justify-center mb-6">
-                        <span class="text-5xl" role="img" aria-label="Clipboard">📋</span>
-                    </div>
-                    <h4 class="font-bold text-lg mb-2 text-main-green">条件整理</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">理想の暮らしを言語化・整理</p>
-                </div>
-                <div class="text-center p-8 border-gray-100 border-b md:border-b-0 md:border-r bg-white flex flex-col items-center">
-                    <div class="w-20 h-20 flex items-center justify-center mb-6">
-                        <span class="text-5xl" role="img" aria-label="Map">🗺️</span>
-                    </div>
-                    <h4 class="font-bold text-lg mb-2 text-main-green">土地探し</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">建物とのバランスを見極めた提案</p>
-                </div>
-                <div class="text-center p-8 border-gray-100 border-b md:border-b-0 md:border-r bg-white flex flex-col items-center">
-                    <div class="w-20 h-20 flex items-center justify-center mb-6">
-                        <span class="text-5xl" role="img" aria-label="Bank">🏦</span>
-                    </div>
-                    <h4 class="font-bold text-lg mb-2 text-main-green">住宅ローン</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">最適な金融機関とプランの選定</p>
-                </div>
-                <div class="text-center p-8 bg-white flex flex-col items-center">
-                    <div class="w-20 h-20 flex items-center justify-center mb-6">
-                        <span class="text-5xl" role="img" aria-label="Calendar">🗓️</span>
-                    </div>
-                    <h4 class="font-bold text-lg mb-2 text-main-green">スケジュール</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">完成までの工程をプロが管理</p>
-                </div>
-            </div>
-
-            <div class="bg-white p-10 rounded-3xl shadow-lg border border-gray-100 flex flex-col items-center gap-8 max-w-3xl mx-auto relative mt-10">
-                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden flex-shrink-0 border-4 border-white shadow-xl bg-gray-50">
-                    <img src="images/taniprof.jpg" alt="ハウス・ブリッジ 谷" class="w-full h-full object-cover" 
-                         onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300';">
-                </div>
-                <div class="text-center w-full">
-                    <p class="text-main-green font-bold text-2xl mb-4">ハウス・ブリッジ 谷より</p>
-                    <p class="text-gray-700 italic mb-8 leading-relaxed text-lg">
-                        「私は特定の建築会社を勧めることはありません。あなたの家族にとって、何が最善かを一緒に考え抜くこと。それが私の仕事です。」
-                    </p>
-                    
-                    <button onclick="toggleGuideMessage()" id="toggleBtn" class="inline-flex items-center text-main-green hover:opacity-70 transition-all border-b-2 border-main-green pb-1 font-bold">
-                        想いを詳しく読む
-                        <svg id="chevronIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-
-                    <div id="guideMessage" class="message-content text-left">
-                        <div class="pt-8 text-base text-gray-600 leading-loose border-t border-gray-100 mt-8">
-                            家づくりは人生で一番大きな買い物と言われますが、実はその「買い方」を教えてくれる場所は驚くほど少ないのが現状です。私は、特定の建築会社やハウスメーカーの営業マンではありません。そのため、お客様に対して特定の会社を強引に勧める必要も、不都合な真実を隠す必要もありません。<br><br>
-                            私の役割は、住宅業界の「プロ側の理論」ではなく、お客様の「暮らしの幸福」を最優先に考え、中立な立場からアドバイスをすることです。予算の立て方から、自分たちに本当に合う建築先の見極め方まで。あなたの家族にとって何が最善かを一緒に考え抜き、理想の家づくりというゴールまで二人三脚で伴走すること。それが、ハウス・ブリッジとしての私の仕事です。
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 px-4 bg-gray-50">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">こんな方に選ばれています</h2>
-            <div class="space-y-4">
-                <div class="bg-white p-6 rounded-xl shadow-sm flex items-start gap-4 border-l-4 border-main-green">
-                    <svg class="w-6 h-6 text-main-green flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
-                    <p class="text-base md:text-lg">「他人と同じ家は嫌」という、デザインと性能を両立させたい方</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm flex items-start gap-4 border-l-4 border-main-green">
-                    <svg class="w-6 h-6 text-main-green flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
-                    <p class="text-base md:text-lg">世帯年収800万円以上で、賢く無理のない資産運用を兼ねた家づくりをしたい方</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm flex items-start gap-4 border-l-4 border-main-green">
-                    <svg class="w-6 h-6 text-main-green flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
-                    <p class="text-base md:text-lg">ネットの情報が多すぎて、何が正しいか分からなくなってしまった方</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 px-4 bg-white">
-        <div class="max-w-3xl mx-auto text-center md:text-left">
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 text-main-green">よくあるご質問</h2>
-            <div class="space-y-6">
-                <div class="bg-gray-50 p-8 rounded-2xl">
-                    <h4 class="font-bold text-main-green mb-3 flex items-start">
-                        <span class="w-8 h-8 rounded-full bg-main-green text-white flex items-center justify-center text-xs mr-3 flex-shrink-0 font-bold">Q</span>
-                        相談したら、必ず契約しなければなりませんか？
-                    </h4>
-                    <p class="pl-11 text-gray-600 text-sm md:text-base">いいえ。検討の結果「今は建てない」という選択が正解な場合もあります。無理な勧誘は一切ありません。</p>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-2xl">
-                    <h4 class="font-bold text-main-green mb-3 flex items-start">
-                        <span class="w-8 h-8 rounded-full bg-main-green text-white flex items-center justify-center text-xs mr-3 flex-shrink-0 font-bold">Q</span>
-                        サポート費用を払うと、逆に高くなりませんか？
-                    </h4>
-                    <p class="pl-11 text-gray-600 text-sm md:text-base">多くの場合、土地の価格交渉や住宅ローンの金利選択、見積もりの精査によって、サポート費用以上の減額効果が生まれています。</p>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-2xl">
-                    <h4 class="font-bold text-main-green mb-3 flex items-start">
-                        <span class="w-8 h-8 rounded-full bg-main-green text-white flex items-center justify-center text-xs mr-3 flex-shrink-0 font-bold">Q</span>
-                        特定の会社を勧められることはありますか？
-                    </h4>
-                    <p class="pl-11 text-gray-600 text-sm md:text-base">特定の会社の営業代行ではありません。数ある選択肢の中から、あなたの予算と好みに合う会社を中立に比較検討します。</p>
                 </div>
             </div>
         </div>
@@ -321,7 +132,9 @@
                     初回無料相談（60分）を受け付けています。<br>
                     無理な勧誘はありませんので、お気軽にご予約ください。
                 </p>
-                <a href="https://house-bridge.jp/contact1" class="inline-block bg-accent-orange text-white text-xl md:text-2xl font-bold py-5 px-12 rounded-xl shadow-lg btn-hover transition-all">
+                <a href="https://house-bridge.jp/contact1" 
+                   onclick="gtag('event', 'generate_lead', {'event_category': 'button', 'event_label': 'footer_contact'});"
+                   class="inline-block bg-accent-orange text-white text-xl md:text-2xl font-bold py-5 px-12 rounded-xl shadow-lg btn-hover transition-all">
                     無料で相談を予約する
                 </a>
                 <p class="mt-8 text-sm opacity-60 text-white/70 italic">※外部の公式サイト予約ページへ移動します</p>
@@ -344,7 +157,9 @@
     </footer>
 
     <div class="fixed bottom-6 right-6 z-50 md:hidden">
-        <a href="https://house-bridge.jp/contact1" class="flex flex-col items-center justify-center w-20 h-20 bg-accent-orange text-white rounded-full shadow-2xl transition-all btn-hover border-2 border-white/20 text-center">
+        <a href="https://house-bridge.jp/contact1" 
+           onclick="gtag('event', 'generate_lead', {'event_category': 'button', 'event_label': 'floating_contact'});"
+           class="flex flex-col items-center justify-center w-20 h-20 bg-accent-orange text-white rounded-full shadow-2xl transition-all btn-hover border-2 border-white/20 text-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
             </svg>
@@ -352,21 +167,5 @@
         </a>
     </div>
 
-    <script>
-        function toggleGuideMessage() {
-            const content = document.getElementById('guideMessage');
-            const icon = document.getElementById('chevronIcon');
-            const btn = document.getElementById('toggleBtn');
-            
-            content.classList.toggle('open');
-            icon.classList.toggle('rotate-180');
-            
-            if (content.classList.contains('open')) {
-                btn.firstChild.textContent = '閉じる';
-            } else {
-                btn.firstChild.textContent = '想いを詳しく読む';
-            }
-        }
-    </script>
-</body>
+    </body>
 </html>
